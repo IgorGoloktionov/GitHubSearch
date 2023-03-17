@@ -1,0 +1,134 @@
+@import "_zero";
+//---------Общие стили------//
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 40px;
+    padding-bottom: 0px;
+}
+._container {
+    max-width: 850px;
+}
+
+
+//---------Стили формы-------//
+.search-field {
+    width: 100%;
+    border: 1px solid #0300bc;
+    border-radius: 6px;
+    line-height: 15px;
+    margin-bottom: 40px;
+}
+
+
+.form {
+    display: flex;
+    width: 100%;
+
+		&__search {
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            padding: 9px 12px 10px;
+            line-height: 15px;
+		}
+		&__button {
+            width: 100px;
+            background-color: #0300bc;
+            padding: 10px;
+            border: none;
+            border-radius: 0px 6px 6px 0px;
+            color: #e1e3e6;
+            cursor: pointer;
+		}
+}
+
+//---------Стили Результата-------//
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto;
+
+}
+//------Стили карточек репозиториев-----//
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: calc(46% - 10px);
+    background-color: rgba(220, 219, 241, 1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+
+    @media (max-width: 835px) {
+        width: calc(100% - 20px);
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    &__image {
+        width: 40%;
+        height: 100%;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+    &__inform {
+        padding: 10px;
+    }
+    &__language {
+        font-size: 10px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 20px;
+    }
+    &__language-sp {
+        margin-left: 10px;
+        font-size: 20px;
+        color: rgb(52, 31, 156);
+    }
+    &__description {
+        border-radius: 6px;
+        padding: 5px;
+        max-height: 70px;
+        background-color: rgba(139, 151, 226, 0.4) ;
+        overflow-y: auto;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 8px;
+    }
+    &__topics {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    &__topic {
+        flex: 1 1 auto;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(139, 151, 226, 0.4);
+        font-size: 7px;
+        max-height: 20px;
+        text-align: center;
+        margin: 5px 10px;
+    }
+}
+.item-contacts {
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+}
+.item-links {
+    margin-left: 10px;
+    font-size: 12px;
+    color: rgb(52, 31, 156);
+}
+
